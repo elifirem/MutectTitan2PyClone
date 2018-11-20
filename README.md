@@ -5,7 +5,7 @@ This script takes outputs of [Mutect2](https://github.com/broadinstitute/gatk) a
 
 **Inputs**: VariantsToTable (tsv file) from Mutect2 and SampleName.segs.txt file from TitanCNA
 
-**Usage**:
+**Usage**: Can be run from command line:
 
     Rscript convert.R variants.table copynumber.seg.txt SampleName
 

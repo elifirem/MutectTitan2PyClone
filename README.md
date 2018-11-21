@@ -7,5 +7,5 @@ This script takes outputs of [Mutect2](https://github.com/broadinstitute/gatk) a
 
 **Usage**:
 
-    $ Rscript convert.R variants.table copynumber.seg.txt SampleName
+    $ Rscript convert.R variants.table copynumber.segs.txt SampleName
 

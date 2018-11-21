@@ -6,6 +6,7 @@ MutectTitan2PyClone <- function(variants, copynum, sample.id, norm.cn = 2) {
   variants <- cbind(variants[,c(1, 2, 14)], MajorCN = as.numeric(NA), MinorCN = as.numeric(NA))
   variants[,3] <- sub("^([^,]*,[^,]*),.*$", "\\1", variants[,3])
   variants <- cSplit(variants, 3, ",")
+  #this function only takes the first alt_allele on a multiallelic site and ignores the rest
   colnames(variants) <- c("chromosome", "position", "MajorCN", "MinorCN", "ref", "alt")
   for (i in 1:nrow(copynum)) {
     pos.filt <- variants$chromosome == copynum$Chromosome[i] & variants$position >= copynum$Start_Position.bp.[i] & variants$position <= copynum$End_Position.bp.[i]
